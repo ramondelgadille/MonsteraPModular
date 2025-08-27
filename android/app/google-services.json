@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "45240849473",
+    "project_id": "monstera-pm",
+    "storage_bucket": "monstera-pm.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:45240849473:android:7580f1feedab7c647562c0",
+        "android_client_info": {
+          "package_name": "com.mycompany.monsterapmodular"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyACUlNO38CNiP4W87PpmMsEOb9KLkGw7XM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

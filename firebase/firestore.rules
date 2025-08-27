@@ -1,0 +1,106 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /collection_preguntas_red/{document} {
+      allow create: if false;
+      allow read: if true;
+      allow write: if false;
+      allow delete: if false;
+    }
+
+    match /collection_usuarios/{document} {
+      allow create: if true;
+      allow read: if true;
+      allow write: if true;
+      allow delete: if false;
+    }
+
+    match /collection_usuarios/{parent}/subcollection_red/{document} {
+      allow create: if true;
+      allow read: if true;
+      allow write: if true;
+      allow delete: if false;
+    }
+
+    match /{path=**}/subcollection_red/{document} {
+      allow read: if true;
+    }
+
+
+    match /collection_usuarios/{parent}/subcollection_tasks/{document} {
+      allow create: if true;
+      allow read: if true;
+      allow write: if true;
+      allow delete: if true;
+    }
+
+    match /{path=**}/subcollection_tasks/{document} {
+      allow read: if true;
+    }
+
+
+    match /collection_usuarios/{parent}/subcollection_evento/{document} {
+      allow create: if true;
+      allow read: if true;
+      allow write: if true;
+      allow delete: if false;
+    }
+
+    match /{path=**}/subcollection_evento/{document} {
+      allow read: if true;
+    }
+
+
+    match /collection_usuarios/{parent}/subcollection_emociones/{document} {
+      allow create: if true;
+      allow read: if true;
+      allow write: if true;
+      allow delete: if false;
+    }
+
+    match /{path=**}/subcollection_emociones/{document} {
+      allow read: if true;
+    }
+
+
+    match /collection_usuarios/{parent}/subcollection_daily_necesidades/{document} {
+      allow create: if true;
+      allow read: if true;
+      allow write: if true;
+      allow delete: if false;
+    }
+
+    match /{path=**}/subcollection_daily_necesidades/{document} {
+      allow read: if true;
+    }
+
+
+    match /collection_eventos_globales/{document} {
+      allow create: if true;
+      allow read: if true;
+      allow write: if true;
+      allow delete: if false;
+    }
+
+    match /collection_emociones_globales/{document} {
+      allow create: if true;
+      allow read: if true;
+      allow write: if true;
+      allow delete: if false;
+    }
+
+    match /collection_preguntas_emociones/{document} {
+      allow create: if false;
+      allow read: if true;
+      allow write: if false;
+      allow delete: if false;
+    }
+
+    match /collection_daily_necesidades_globales/{document} {
+      allow create: if true;
+      allow read: if true;
+      allow write: if true;
+      allow delete: if false;
+    }
+  }
+}

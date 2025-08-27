@@ -1,0 +1,22 @@
+{
+  "indexes": [
+    {
+      "collectionGroup": "subcollection_tasks",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "estado",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "prioridad",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "tiempo",
+          "order": "ASCENDING"
+        }
+      ]
+    }
+  ]
+}
